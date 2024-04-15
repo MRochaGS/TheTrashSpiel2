@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5u4wfdob3050"]
+
+[ext_resource type="Texture2D" uid="uid://4ltn0v7x3og3" path="res://sprites/cerveja_sprite.png" id="1_h33iv"]
+[ext_resource type="Script" path="res://script/bebida.gd" id="1_uo8yq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsmmh"]
+size = Vector2(39.5633, 7)
+
+[node name="bebida" type="Area2D"]
+script = ExtResource("1_uo8yq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, 10)
+scale = Vector2(0.0892969, 0.103641)
+texture = ExtResource("1_h33iv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.96046e-08, -1.5)
+scale = Vector2(0.101104, 1)
+shape = SubResource("RectangleShape2D_lsmmh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

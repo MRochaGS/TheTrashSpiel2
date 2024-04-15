@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhxs6gtaur3li"]
+
+[ext_resource type="Texture2D" uid="uid://dsd14hilnm0ok" path="res://sprites/bueiro-sprite.png" id="1_inffi"]
+[ext_resource type="Script" path="res://script/iniciar.gd" id="1_v671m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aogfu"]
+size = Vector2(20, 34)
+
+[node name="iniciar" type="Area2D"]
+script = ExtResource("1_v671m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -9)
+shape = SubResource("RectangleShape2D_aogfu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+texture = ExtResource("1_inffi")
